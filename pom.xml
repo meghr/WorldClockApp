@@ -13,5 +13,49 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
+    <dependencies>
+        <!-- Other dependencies -->
+
+        <!-- JavaFX dependencies -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>17.0.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17.0.10</version> <!-- Replace with the version of JavaFX you are using -->
+        </dependency>
+        <!-- Add other JavaFX dependencies as needed -->
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- or later version -->
+                <configuration>
+                    <source>11</source> <!-- or the version of Java you are using -->
+                    <target>11</target> <!-- or the version of Java you are using -->
+                </configuration>
+            </plugin>
+            <!-- Add plugin for running JavaFX applications -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.7</version> <!-- Replace with the version of JavaFX Maven Plugin you are using -->
+                <configuration>
+                    <mainClass>org.meghraj.WorldClockApp</mainClass> <!-- Replace with the fully qualified name of your main class -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
 </project>
